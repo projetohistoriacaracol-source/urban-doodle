@@ -1,14 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Memórias de Caracol - MS</title>
     <style>
-
-
-        
         * {
             margin: 0;
             padding: 0;
@@ -28,6 +24,7 @@
             padding: 2rem 0;
             text-align: center;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: relative;
         }
         
         .header-content {
@@ -37,55 +34,34 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
-        } <div class="brasao-container">
-    <div class="brasao">
+        }
         
-        <img src="Brasão_de_Mato_Grosso_do_Sul.svg" alt="Brasão do Estado">
-    </div>
-
+        .brasões-header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            margin: 20px 0;
+        }
         
-    <div class="brasao">
-        <img src="Bandeira_de_Mato_Grosso_do_Sul.svg" alt="Bandeira do Estado">
-    </div>
-
-
+        .brasao {
+            width: 120px;
+            height: 120px;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 10px;
+            border-radius: 8px;
+            border: 2px solid #f0f0f0;
+        }
         
-</div>
-  .brasao-container {
-    position: relative;
-    width: auto;
-    margin: 30px 0;
-    height: auto;
-}
-
-.brasao {
-    position: absolute;
-    width: 180px;
-    height: 135px;
-    background-color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    padding: 12px;
-    border: 2px solid #f0f0f0;
-}
-
-/* Brasão à ESQUERDA */
-.brasao:first-child {
-    left: 50px; /* Distância da esquerda */
-}
-
-/* Bandeira à DIREITA */
-.brasao:last-child {
-    right: 50px; /* Distância da direita */
-}
-
-.brasao img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
+        .brasao img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
         
         h1 {
             font-size: 2.5rem;
@@ -288,9 +264,8 @@
                 grid-template-columns: 1fr;
             }
             
-            .brasao-container {
+            .brasões-header {
                 flex-direction: column;
-                align-items: center;
                 gap: 20px;
             }
         }
@@ -301,11 +276,14 @@
         <div class="header-content">
             <h1>Memórias de Caracol - MS</h1>
             <p>Preservando a história e cultura do nosso povo</p>
-            <!-- Adicione esta div após o título <h1>Caracol</h1> -->
-<div class="brasões-header">
-    <img src="Brasão_de_Mato_Grosso_do_Sul.svg" alt="Brasão do Estado de Mato Grosso do Sul" class="brasao estado">
-    <img src="Bandeira_de_Mato_Grosso_do_Sul.svg" alt="Bandeira do Estado de Mato Grosso do Sul" class="brasao bandeira">
-</div>
+            
+            <div class="brasões-header">
+                <div class="brasao">
+                    <img src="Brasão_de_Mato_Grosso_do_Sul.svg" alt="Brasão do Estado de Mato Grosso do Sul">
+                </div>
+                <div class="brasao">
+                    <img src="Bandeira_de_Mato_Grosso_do_Sul.svg" alt="Bandeira do Estado de Mato Grosso do Sul">
+                </div>
             </div>
         </div>
     </header>
@@ -400,81 +378,83 @@
             </div>
         </section>
         
-      <section id="hinos">
-    <h2 class="section-title">Hinos</h2>
+        <section id="hinos">
+            <h2 class="section-title">Hinos</h2>
+            
+            <div class="hino">
+                <h3>Hino de Caracol</h3>
+                <p>
+                Nesta terra, de tantas belezas entre cerros<br>
+                Descansa a natureza e o vento anuncia com certeza<br>
+                Por Deus ela foi abençoada.<br><br>
+                
+                Caracol terra querida com tradição<br>
+                Seu povo abriga trás a fronteira a fala amiga<br>
+                Faz do trabalho a integração.<br><br>
+                
+                Seu nome está, na sua história menina por teira<br>
+                Hoje crescida Caracol banhada por um rio<br>
+                Que aquece seu nome no fundo brilha iluminada pelo sol.<br><br>
+                
+                Caracol lugar tão lindo<br>
+                Onde memórias cultivadas neste chão<br>
+                Acolheu famílias e desbravadores<br>
+                Como as de João, Maurilio e Libindo.<br><br>
+                
+                Todos juntos no mesmo princípio<br>
+                Das chácaras, fazenda e distritos<br>
+                Crescendo em paz o municipio<br>
+                Para que ensinando também se aprenda.<br><br>
+                
+                Caracol seu nome gira como dança<br>
+                Que faz bater no coração<br>
+                Seu nome no tempo não espera d'estarte<br>
+                Cantamos com emoção.<br><br>
+                
+                Seu nome no tempo, não espera d'estarte<br>
+                Recantamos com emoção.
+                </p>
+            </div>
+            
+            <div class="hino">
+                <h3>Hino de Mato Grosso do Sul</h3>
+                <p>
+                Os celeiros de farturas<br>
+                Sob um céu de puro azul<br>
+                Reforjaram em Mato Grosso do Sul<br>
+                Uma gente audaz<br><br>
+                
+                Tuas matas e teus campos<br>
+                O esplendor do Pantanal<br>
+                E teus rios são tão ricos<br>
+                Que não há igual<br><br>
+                
+                A pujança e a grandeza<br>
+                De fertilidades mil<br>
+                São o orgulho e a certeza<br>
+                Do futuro do Brasil<br><br>
+                
+                Moldurados pelas serras<br>
+                Campos grandes: Vacaria<br>
+                Rememoram desbravadores<br>
+                Heróis, tanta galhardia!<br><br>
+                
+                Vespasiano, Camisão<br>
+                E o tenente Antonio João<br>
+                Guaicurus, Ricardo Franco<br>
+                Glória e tradição!<br><br>
+                
+                A pujança e a grandeza<br>
+                De fertilidades mil<br>
+                São o orgulho e a certeza<br>
+                Do futuro do Brasil<br><br>
+                
+                <em>Composição: Jorge Antonio Siuff / Otávio Gonçalves Gomes</em>
+                </p>
+            </div>
+        </section>
+    </main>
     
-    <div class="hino">
-        <h3>Hino de Caracol</h3>
-        <p>
-        Nesta terra, de tantas belezas entre cerros<br>
-        Descansa a natureza e o vento anuncia com certeza<br>
-        Por Deus ela foi abençoada.<br><br>
-        
-        Caracol terra querida com tradição<br>
-        Seu povo abriga trás a fronteira a fala amiga<br>
-        Faz do trabalho a integração.<br><br>
-        
-        Seu nome está, na sua história menina por teira<br>
-        Hoje crescida Caracol banhada por um rio<br>
-        Que aquece seu nome no fundo brilha iluminada pelo sol.<br><br>
-        
-        Caracol lugar tão lindo<br>
-        Onde memórias cultivadas neste chão<br>
-        Acolheu famílias e desbravadores<br>
-        Como as de João, Maurilio e Libindo.<br><br>
-        
-        Todos juntos no mesmo princípio<br>
-        Das chácaras, fazenda e distritos<br>
-        Crescendo em paz o municipio<br>
-        Para que ensinando também se aprenda.<br><br>
-        
-        Caracol seu nome gira como dança<br>
-        Que faz bater no coração<br>
-        Seu nome no tempo não espera d'estarte<br>
-        Cantamos com emoção.<br><br>
-        
-        Seu nome no tempo, não espera d'estarte<br>
-        Recantamos com emoção.
-        </p>
-    </div>
-    
-    <div class="hino">
-        <h3>Hino de Mato Grosso do Sul</h3>
-        <p>
-        Os celeiros de farturas<br>
-        Sob um céu de puro azul<br>
-        Reforjaram em Mato Grosso do Sul<br>
-        Uma gente audaz<br><br>
-        
-        Tuas matas e teus campos<br>
-        O esplendor do Pantanal<br>
-        E teus rios são tão ricos<br>
-        Que não há igual<br><br>
-        
-        A pujança e a grandeza<br>
-        De fertilidades mil<br>
-        São o orgulho e a certeza<br>
-        Do futuro do Brasil<br><br>
-        
-        Moldurados pelas serras<br>
-        Campos grandes: Vacaria<br>
-        Rememoram desbravadores<br>
-        Heróis, tanta galhardia!<br><br>
-        
-        Vespasiano, Camisão<br>
-        E o tenente Antonio João<br>
-        Guaicurus, Ricardo Franco<br>
-        Glória e tradição!<br><br>
-        
-        A pujança e a grandeza<br>
-        De fertilidades mil<br>
-        São o orgulho e a certeza<br>
-        Do futuro do Brasil<br><br>
-        
-        <em>Composição: Jorge Antonio Siuff / Otávio Gonçalves Gomes
-        </p>
-    </div>
-</section>
     <footer id="contato">
         <div class="footer-content">
             <h3>Memórias de Caracol - MS</h3>
