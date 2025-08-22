@@ -5,6 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Memórias de Caracol - MS</title>
     <style>
+        <style>
+  /* container do topo */
+  .topo {
+    display: flex;
+    justify-content: space-between; /* um na esquerda, outro na direita */
+    align-items: center;
+    gap: 16px;
+    padding: 8px 16px;
+  }
+
+  /* título no meio */
+  .topo h1 {
+    margin: 0;
+    text-align: center;
+    font-size: clamp(1.2rem, 3vw, 2rem);
+  }
+
+  /* imagens dos brasões/bandeira */
+  .topo .brasao {
+    max-height: 80px;   /* ajuste fino aqui se quiser maior/menor */
+    height: auto;
+    width: auto;
+  }
+
+  /* responsivo: em telas bem estreitas, diminui um pouco os brasões */
+  @media (max-width: 480px) {
+    .topo .brasao { max-height: 56px; }
+  }
+</style>
+
         * {
             margin: 0;
             padding: 0;
@@ -41,7 +71,7 @@
             justify-content: center;
             align-items: center;
             gap: 40px;
-            margin: 20px 0;
+            margin: 60px 0;
         }
         
         .brasao {
