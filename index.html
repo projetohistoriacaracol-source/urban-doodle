@@ -283,31 +283,104 @@
                 <div class="photo-card">                   
                     <div class="photo-info">
                         <h3>Família tradicional (década de 1970)</h3>
-                        <p><p style="text-align: justify;">
-                         Entre o cheiro do churrasco de chão, a música do baile carapé e as festas de aniversário, essas imagens guardam a essência das tradições que deram identidade à nossa terra e às famílias que a construíram."</p>
-                         <!-- SUBSTITUA ESTE src PELO CAMINHO DA SUA FOTO -->
-                    <img src="familia toca.png" alt="Família tradicional de Caracol">
-                    <img src="emidia.png" alt="Família tradicional de Caracol">
-                    <img src="churrasco de chão.png" alt="Família tradicional de Caracol">
-                         <p><p style="text-align: justify;">
-                        <h3>"Mais que comida, um ritual que celebrava amizade e alegria em cada festa."</h3></p> 
-                    <img src="baile carapé.png" alt="Família tradicional de Caracol">
-                              <p><p style="text-align: justify;">
-                       <h3>"No ritmo do carapé, a alegria tomava conta de todos; cada passo, um momento de celebração da nossa cultura."</h3></p> 
-                    <img src="tia mimosa.png" alt="Família tradicional de Caracol">
-                    <img src="toca e filhos.png" alt="Família tradicional de Caracol">
-                       <h3> "Cada fatia do bolo vinha acompanhada da alegria de viver as festas que marcam nossa cultura." </h3></p>
-                    <img src="truco.png" alt="Família tradicional de Caracol">
-                            <p><p style="text-align: justify;">
-                        <h3>"Em cada carta, uma história; em cada rodada, lembranças de festas inesquecíveis."</h3></p>
-                    <img src="6 serie.png" alt="Família tradicional de Caracol">
-                        <h3> "1986, 6ª série: sorrisos, histórias e a tradição de registrar cada turma."</h3>
-                    <img src="batismo.png" alt="Família tradicional de Caracol">
-                    <img src="irmã esperanca.png" alt="Família tradicional de Caracol">
-                                 <p><p style="text-align: justify;">
-                        <h3>"Irmã Esperança – sua dedicação e amor pela comunidade jamais serão esquecidos."</h3></p>
-                    <img src="pai e filhos.png" alt="Família tradicional de Caracol">
-                    </div>
+<p style="text-align: justify;">
+    Entre o cheiro do churrasco de chão, a música do baile carapé e as festas de aniversário, 
+    essas imagens guardam a essência das tradições que deram identidade à nossa terra e às famílias que a construíram.
+</p>
+
+<!-- Carrossel de fotos -->
+<div class="carousel">
+    <div class="carousel-images">
+        <img src="familia toca.png" alt="Família tradicional de Caracol">
+        <img src="emidia.png" alt="Família tradicional de Caracol">
+        <img src="churrasco de chão.png" alt="Família tradicional de Caracol">
+        <img src="baile carapé.png" alt="Família tradicional de Caracol">
+        <img src="tia mimosa.png" alt="Família tradicional de Caracol">
+        <img src="toca e filhos.png" alt="Família tradicional de Caracol">
+        <img src="truco.png" alt="Família tradicional de Caracol">
+        <img src="6 serie.png" alt="Família tradicional de Caracol">
+        <img src="batismo.png" alt="Família tradicional de Caracol">
+        <img src="irmã esperanca.png" alt="Família tradicional de Caracol">
+        <img src="pai e filhos.png" alt="Família tradicional de Caracol">
+    </div>
+    <button class="prev">❮</button>
+    <button class="next">❯</button>
+</div>
+
+<!-- Frases e destaques abaixo do carrossel -->
+<h3>"Mais que comida, um ritual que celebrava amizade e alegria em cada festa."</h3>
+<h3>"No ritmo do carapé, a alegria tomava conta de todos; cada passo, um momento de celebração da nossa cultura."</h3>
+<h3>"Cada fatia do bolo vinha acompanhada da alegria de viver as festas que marcam nossa cultura."</h3>
+<h3>"Em cada carta, uma história; em cada rodada, lembranças de festas inesquecíveis."</h3>
+<h3>"1986, 6ª série: sorrisos, histórias e a tradição de registrar cada turma."</h3>
+<h3>"Irmã Esperança – sua dedicação e amor pela comunidade jamais serão esquecidos."</h3>
+
+<style>
+.carousel {
+  position: relative;
+  width: 80%;
+  max-width: 700px;
+  margin: 20px auto;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.carousel-images {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-images img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+h3 {
+  color: green; /* títulos e frases em verde */
+  text-align: center;
+  margin-top: 15px;
+}
+</style>
+
+<script>
+const carousel = document.querySelector('.carousel-images');
+const images = document.querySelectorAll('.carousel-images img');
+const prev = document.querySelector('.prev');
+const next = document.querySelector('.next');
+
+let index = 0;
+
+function showImage() {
+  carousel.style.transform = `translateX(${-index * 100}%)`;
+}
+
+prev.addEventListener('click', () => {
+  index = (index > 0) ? index - 1 : images.length - 1;
+  showImage();
+});
+
+next.addEventListener('click', () => {
+  index = (index < images.length - 1) ? index + 1 : 0;
+  showImage();
+});
+</script>
+
                 </div>
                 
                 <div class="photo-card">
